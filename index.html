@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="MDB-Free_4.12.0/css/mdb.lite.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+          rel="stylesheet">
+
+    <title>Research Form</title>
+
+    <style>
+        .rounded-lg {
+            border-radius: 1rem;
+        }
+
+        .nav-pills .nav-link {
+            color: #555;
+        }
+
+        .nav-pills .nav-link.active {
+            color: #fff;
+        }
+
+        * {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        label {
+            font-weight: 400;
+        }
+
+        .form-check-label, .form-control-file {
+            font-weight: 300;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Horizontal Steppers -->
+    <!-- Stepers Wrapper -->
+    <ul class="stepper stepper-horizontal">
+
+        <!-- First Step -->
+        <li class="completed" id="step1">
+            <a href="#step1" onclick="step1()">
+                <span class="circle">1</span><span class="label">Account</span>
+            </a>
+        </li>
+        <!-- Second Step -->
+        <li id="step2">
+            <a href="#step2" onclick="step2()">
+                <span class="circle">2</span><span class="label">Basic Information</span>
+            </a>
+        </li>
+        <!-- Second Step -->
+        <li class="" id="step3">
+            <a href="#step3" onclick="step3()">
+                <span class="circle">3</span><span class="label">Profile</span>
+            </a>
+        </li>
+        <li class="" id="step5">
+            <a href="#step5" onclick="step5()">
+                <span class="circle"><i class="fa fa-list"></i></span><span class="label">Summary</span>
+            </a>
+        </li>
+
+    </ul>
+    <!-- /.Stepers Wrapper -->
+
+    <!-- /.Horizontal Steppers -->
+    <form action="index.html">
+        <fieldset id="form1">
+            <label>Please, read the following paragraph</label>
+            <p>
+                In our research, we generally aim at an analysis of eye-tracking data. You are participating in the
+                experiment necessary for gathering the data. Please, fill each form item and insert actual data. We will
+                use the data from questions as a source for descriptive statistics.
+            </p>
+            <div class="form-group row">
+                <label for="exampleInputName" class="col-sm-2 col-form-label">Full name</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="exampleInputEmail" class="col-sm-2 col-form-label">Your email</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="exampleInputAge" class="col-sm-2 col-form-label">Your age</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control" id="exampleInputAge" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <!--            <div class="form-group row">-->
+            <!--                <label for="exampleInputPassword1" class="col-sm-2 col-form-label">Choose password</label>-->
+            <!--                <div class="col-sm-7">-->
+            <!--                    <input type="password" class="form-control" id="exampleInputPassword1">-->
+            <!--                    <small id="passwordHelp" class="form-text text-muted">Your password has to be at least 6 characters-->
+            <!--                        long.</small>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div class="form-group row">-->
+            <!--                <label for="exampleInputPassword2" class="col-sm-2 col-form-label">Password again</label>-->
+            <!--                <div class="col-sm-7">-->
+            <!--                    <input type="password" class="form-control" id="exampleInputPassword2">-->
+            <!--                    <small id="password2Help" class="form-text text-muted">Please repeat your password for-->
+            <!--                        validation.</small>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Choose your sex</label>
+                <div class="form-check col-sm-6">
+                    <div>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadiosFemale"
+                               value="option1">
+                        <label class="form-check-label" for="exampleRadiosFemale">
+                            Female
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadiosMale"
+                               value="option1">
+                        <label class="form-check-label" for="exampleRadiosMale">
+                            Male
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="occupation" class="col-sm-2 col-form-label">Occupation</label>
+                <div class="col-sm-7">
+                    <select class="form-control dropdown" id="occupation" name="occupation">
+                        <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                        <optgroup label="Students:">
+                            <option value="1">- Economics</option>
+                            <option value="2">- Dentist</option>
+                            <option value="3">- Healthcare</option>
+                            <option value="8">- Podiatrist</option>
+                            <option value="9">- Nursing</option>
+                            <option value="11">- Veterinarian</option>
+                            <option value="12">- Informatics</option>
+                            <option value="12">- Other studies</option>
+                        </optgroup>
+                        <optgroup label="Unemployed:">
+                            <option value="122">- Searching for new job</option>
+                            <option value="123">- Health reasons</option>
+                            <option value="124">- Enjoying time off</option>
+                            <option value="125">- Other reasons</option>
+                        </optgroup>
+                        <optgroup label="Job positions:">
+                            <option value="23">- Accountant, Auditor</option>
+                            <option value="19">- Advertising, Marketing, Promotions, Public Relations, and Sales
+                            </option>
+                            <option value="27">- Architect, Surveyor, or Cartographer</option>
+                            <option value="34">- Arts, Design, Entertainment, Sports, and Media Occupations</option>
+                            <option value="24">- Business Operations or Financial Specialist</option>
+                            <option value="25">- Business Owner</option>
+                            <option value="21">- Construction</option>
+                            <option value="17">- Chief Executive</option>
+                            <option value="35">- Computer Specialist, Mathematical Science</option>
+                            <option value="22">- Engineering</option>
+                            <option value="61">- Farming, Fishing, and Forestry</option>
+                            <option value="18">- General and Operations Manager</option>
+                            <option value="69">- Homemaker</option>
+                            <option value="37">- Lawyer, Judge</option>
+                            <option value="68">- Military</option>
+                            <option value="31">- Primary, Secondary, or Special Education School Teacher</option>
+                            <option value="31">- University teacher</option>
+                            <option value="38">- Scientist</option>
+                            <option value="70">- Other Occupation</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="exampleFormControlFile0">Profile picture</label>
+                <div class="col-sm-7">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile0">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="exampleInputNumber" class="col-sm-2 col-form-label">Your lucky number</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control" id="exampleInputNumber" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <a onclick="step2()" class="btn btn-primary">Next step &nbsp;<i class="fa fa-chevron-right"></i></a>
+            </div>
+        </fieldset>
+        <fieldset id="form2" style="display: none;">
+            <label>Again, please, read the following carefully</label>
+            <p>
+                After we gather the data, we have to label it. We mark the data using special software VEAUX. After
+                labeling, we merge the data with eye-tracking export. Then we do a preprocessing using Google Colab and
+                Python programming language.
+            </p>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea0">Characterise yourself (in 2-3 sentences)</label>
+                <textarea class="form-control col-sm-8" id="exampleFormControlTextarea0" rows="4" cols="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label>
+                    Do you have any eye defect?
+                </label>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                No, I have healthy eyes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                            <label class="form-check-label" for="defaultCheck2">
+                                Glasses
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                            <label class="form-check-label" for="defaultCheck3">
+                                Contact lenses
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                            <label class="form-check-label" for="defaultCheck4">
+                                Short-sightedness (Myopia)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                            <label class="form-check-label" for="defaultCheck5">
+                                Far-sightedness (Hyperopia; reading problems)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                            <label class="form-check-label" for="defaultCheck6">
+                                Strabismus (non aligned eyes)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                            <label class="form-check-label" for="defaultCheck7">
+                                Astigmatism
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                            <label class="form-check-label" for="defaultCheck8">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Evaluate your computer skills</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios21"
+                           value="option2">
+                    <label class="form-check-label" for="exampleRadios21">
+                        Use it mainly for web browsing and emails
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios31"
+                           value="option3">
+                    <label class="form-check-label" for="exampleRadios31">
+                        I use it at work (web, email, excel, word,...)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios41"
+                           value="option4">
+                    <label class="form-check-label" for="exampleRadios41">
+                        I am an IT student
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios42"
+                           value="option4">
+                    <label class="form-check-label" for="exampleRadios42">
+                        I work in IT
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <a onclick="step1()" class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> Previous step&nbsp;</a>
+                <a onclick="step3()" class="btn btn-primary">Next step &nbsp;<i class="fa fa-chevron-right"></i></a>
+            </div>
+        </fieldset>
+        <fieldset id="form3" style="display: none;">
+            <div class="form-group row">
+                <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Where are you from?</label>
+                <div class="col-sm-6">
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option value="---">--- select your nationality ---</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Åland Islands">Åland Islands</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Bouvet Island">Bouvet Island</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option>
+                        <option value="Cayman Islands">Cayman Islands</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Christmas Island">Christmas Island</option>
+                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The
+                        </option>
+                        <option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Cote D'ivoire">Cote D'ivoire</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                        <option value="Faroe Islands">Faroe Islands</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option>
+                        <option value="French Southern Territories">French Southern Territories</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Gibraltar">Gibraltar</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guernsey">Guernsey</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea-bissau">Guinea-bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                        <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Isle of Man">Isle of Man</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jersey">Jersey</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of
+                        </option>
+                        <option value="Korea, Republic of">Korea, Republic of</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Macao">Macao</option>
+                        <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav
+                            Republic
+                            of
+                        </option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mayotte">Mayotte</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                        <option value="Moldova, Republic of">Moldova, Republic of</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Netherlands Antilles">Netherlands Antilles</option>
+                        <option value="New Caledonia">New Caledonia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niue">Niue</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Pitcairn">Pitcairn</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Reunion">Reunion</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Helena">Saint Helena</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South
+                            Sandwich
+                            Islands
+                        </option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                        <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-leste">Timor-leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tokelau">Tokelau</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands
+                        </option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Viet Nam">Viet Nam</option>
+                        <option value="Virgin Islands, British">Virgin Islands, British</option>
+                        <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                        <option value="Wallis and Futuna">Wallis and Futuna</option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>I have already visited</label>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck101">
+                            <label class="form-check-label" for="defaultCheck101">
+                                Prague
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck111">
+                            <label class="form-check-label" for="defaultCheck111">
+                                Brno
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck121">
+                            <label class="form-check-label" for="defaultCheck121">
+                                Germany
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck131">
+                            <label class="form-check-label" for="defaultCheck131">
+                                Austria
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+                            <label class="form-check-label" for="defaultCheck10">
+                                North America
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+                            <label class="form-check-label" for="defaultCheck11">
+                                South America
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+                            <label class="form-check-label" for="defaultCheck12">
+                                Asia
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck13">
+                            <label class="form-check-label" for="defaultCheck13">
+                                Africa
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label>Highest completed education</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                           value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        High School
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                           value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        University - BSc (Bachelor; Bc.)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                           value="option5">
+                    <label class="form-check-label" for="exampleRadios5">
+                        University - MSc (Master; Ing.)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
+                           value="option4">
+                    <label class="form-check-label" for="exampleRadios4">
+                        University - Ph.D.
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Insert your CV</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">What are your plans for today (in 2-3 sentences)</label>
+                <textarea class="form-control col-sm-8" id="exampleFormControlTextarea1" rows="4" cols="5"></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <a onclick="step2()" class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> Previous step&nbsp;</a>
+                <a onclick="step5()" class="btn btn-primary">Next step &nbsp;<i class="fa fa-chevron-right"></i></a>
+            </div>
+        </fieldset>
+        <fieldset id="form5" style="display: none;">
+            <div class="form-group">
+                In a standard form, there should be a summary of the form.
+                <br><br>
+                <div class="form-inline">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck50">
+                    <label class="form-check-label form" for="defaultCheck50">
+                        I agree that my data will be used anonymously for the purpose of the presented research only
+                    </label>
+                </div>
+                <div class="form-inline">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck51">
+                    <label class="form-check-label" for="defaultCheck51">
+                        I read this because I was instructed to. There is no sense in this sentence. Just tick it
+                        please.
+                    </label>
+                </div>
+                <br>
+                Thank you for participating in the experiment. Just click the button submit to finish.
+            </div>
+            <div class="form-group">
+                <a onclick="step3()" class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> Previous step&nbsp;</a>
+                <a onclick="stepFinal()" class="btn btn-primary">Submit</a>
+            </div>
+        </fieldset>
+        <fieldset id="formFinal" style="display: none;">
+            <div class="jumbotron text-center">
+                <i class="fa fa-check-circle-o" style="font-size: 7rem"></i>
+                <br>
+                <span style="font-size: 5rem">
+                Thank you for participating the experiment.
+                </span>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="bootstrap-4/js/bootstrap.min.js"></script>
+<script src="bootstrap-4/js/bootstrap.bundle.min.js"></script>
+<script>
+    function step1() {
+        $("form fieldset").hide();
+        $(".stepper li").each(function () {
+            $(this).removeClass("completed");
+            $(this).removeClass("active");
+        });
+        $(".stepper #step1").addClass("active");
+        $("#form1").show();
+        window.scrollTo(0, 0);
+    }
+
+    function step2() {
+        $("form fieldset").hide();
+        $(".stepper li").each(function () {
+            $(this).removeClass("completed");
+            $(this).removeClass("active");
+        });
+        $(".stepper #step1").addClass("completed");
+        $(".stepper #step2").addClass("active");
+        $("#form2").show();
+        window.scrollTo(0, 0);
+    }
+
+    function step3() {
+        $("form fieldset").hide();
+        $(".stepper li").each(function () {
+            $(this).removeClass("completed");
+            $(this).removeClass("active");
+        });
+        $(".stepper #step1").addClass("completed");
+        $(".stepper #step2").addClass("completed");
+        $(".stepper #step3").addClass("active");
+        $("#form3").show();
+        window.scrollTo(0, 0);
+    }
+
+    function step4() {
+        $("form fieldset").hide();
+        $(".stepper li").each(function () {
+            $(this).removeClass("completed");
+            $(this).removeClass("active");
+        });
+        $(".stepper #step1").addClass("completed");
+        $(".stepper #step2").addClass("completed");
+        $(".stepper #step3").addClass("completed");
+        $(".stepper #step4").addClass("active");
+        $("#form4").show();
+        window.scrollTo(0, 0);
+    }
+
+    function step5() {
+        $("form fieldset").hide();
+        $(".stepper li").each(function () {
+            $(this).addClass("completed");
+            $(this).removeClass("active");
+        });
+        $(".stepper #step5").addClass("active");
+        $("#form5").show();
+        window.scrollTo(0, 0);
+    }
+
+    function stepFinal() {
+        $("form fieldset").hide();
+        $("#formFinal").show();
+        window.scrollTo(0, 0);
+    }
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+
+    });
+</script>
+</body>
+</html>
