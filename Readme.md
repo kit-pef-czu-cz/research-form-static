@@ -1,4 +1,5 @@
 #Aplikace na sledování vyplňování formuláře
+Prototyp mám jinde, ale nevím, jestli to bude fungovat s upraveným formem...
 
 ## Cíl
 Sledování, jak vyplňuje uživatel - kdy jaké prvky formuláře. Je to pro výzkum - automatickou klasifikaci činností uživatele při vyplňování formuláře.
